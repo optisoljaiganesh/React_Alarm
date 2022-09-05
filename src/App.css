@@ -29,10 +29,20 @@
 }
 
 
-.clock{
+.clock_success{
   float: center;
-  height:500px;
-  width:500px;
+  height:309px;
+  width:309px;
+  color: green;
+  border: 5px solid ;
+  border-radius: 50%;
+}
+.clock_normal{
+  float: center;
+  height:309px;
+  width:309px;
+  border: 5px solid ;
+  border-radius: 50%;
 }
 @keyframes App-logo-spin {
   from {
