@@ -5,11 +5,9 @@ import AlarmClock from './Component/Alarm.jsx'
 import './App.css';
 
 function App() {
-
-
   return (
     <div className="App">
-    <h1>ALARM CLOCK</h1>
+    <h1>REACT ALARM CLOCK</h1>
     <AlarmClock/>
     </div>
   );
