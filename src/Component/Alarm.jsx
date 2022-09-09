@@ -49,6 +49,7 @@ export class AlarmClock extends Component {
   onChangeTime = (e) => {
     this.setState({ timeValue: e.target.value, setAlarm: true, playAudio: false, secondCount: 0 });
   }
+
   setAlarm() {
     this.setState({ checkSecondCount: this.state.secondCount++ })
     if (this.state.checkSecondCount == 60) {
@@ -64,6 +65,7 @@ export class AlarmClock extends Component {
       this.setState({ playAudio: true })
     }
   }
+  //clear alarm 
   clearAlarm() {
     this.setState({ timeValue: "", playAudio: false, setAlarm: false });
     clearInterval(interval)
