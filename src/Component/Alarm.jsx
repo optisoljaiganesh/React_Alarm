@@ -62,7 +62,7 @@ export class AlarmClock extends Component {
     let currentTime = moment(now).local().format('HH:mm')
     this.setState({ playAudio: false })
     if (this.state.timeValue === currentTime) {
-      this.setState({ playAudio: true })
+      this.setState({ playAudio: true, })
     }
   }
   //clear alarm 
@@ -80,7 +80,19 @@ export class AlarmClock extends Component {
       this.setState({ timeValue: snoozeAlarm, playAudio: false });
     }
   }
+  setAlarmMusic = () => {
+    let music = localStorage.getItem('alarmMusic');
+    this.setState({ music: music });
+    setTimeout(() => {
+      console.log(this.state.music);
+    }, 500)
+  }
 
+  setDefaultMusic = () => {
+    this.setState({ music: null })
+    localStorage.clear();
+    alert('default tone set successfully ')
+  }
 
   render() {
     return (
